@@ -12,6 +12,7 @@ public class Grace {
 
     private OsTelevision mOsTelevision;
     private Activity mActivity;
+    private boolean isLoader=true;
 
     public Grace(Activity mActivity) {
         this.mActivity = mActivity;
@@ -20,7 +21,8 @@ public class Grace {
 
     public void cover() {
         mOsTelevision.conversion(OsTelevision.LODE_FLAG);
-        if (mOsTelevision != null) {
+        if (mOsTelevision != null&&isLoader) {
+            this.isLoader=false;
             mActivity.addContentView(mOsTelevision, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.MATCH_PARENT));
         }

@@ -14,12 +14,13 @@ import com.grace.Grace;
 
 public class MainActivity extends AppCompatActivity {
 
+      Grace grace=null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Grace grace = new Grace(this);
+        grace = new Grace(this);
         grace.cover();
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -30,8 +31,15 @@ public class MainActivity extends AppCompatActivity {
         },5000);
     }
 
-    private void syncNow(){
-        Toast.makeText(this,"yeah yeah yeah ",Toast.LENGTH_SHORT).show();
+    private void onAgain(){
+        grace.cover();
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                grace.rest();
+            }
+        },5000);
     }
 
     @Override
