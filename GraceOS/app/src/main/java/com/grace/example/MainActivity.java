@@ -19,9 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-         final Grace grace = new Grace(this);
+        final Grace grace = new Grace(this);
         grace.cover();
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
