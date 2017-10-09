@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         grace = new Grace(this);
         grace.cover();
         Handler handler = new Handler();
