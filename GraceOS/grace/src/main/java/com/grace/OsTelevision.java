@@ -61,6 +61,7 @@ public class OsTelevision extends FrameLayout {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         switch (keyCode) {
+            case KeyEvent.KEYCODE_DPAD_CENTER:
             case KeyEvent.KEYCODE_ENTER:
                 if (conversion == LODE_ERROR_FLAG) {
                     method();
